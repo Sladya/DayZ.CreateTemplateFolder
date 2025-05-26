@@ -1,11 +1,16 @@
 # Описание
 ## Создание папки-шаблона для DayZ в VSCode
+
 - Нажмите правой кнопкой мыши по папке в VSC
+
 - Выбeрите пункт "Создать папку(шаблон для мода)"
 ![Создать папку(шаблон для мода)](https://s.iimg.su/s/26/D67jfiEUrEYGEd08RrBLb0293rLjuxM33DOxs0ao.png)
+
 - Введите название папки
 ![Название](https://s.iimg.su/s/26/YRrroJlchpsuzxZUyphdIPvT0KIBN4TLdUbBJhOS.png)
+
 - Создастся папка-шаблон
+
 ![Папка-шаблон](https://s.iimg.su/s/26/NmVfqPcJWIHHJb3s03eECl5w691iIyZenh4cIrxi.png)
 
 # Настройка расширения
