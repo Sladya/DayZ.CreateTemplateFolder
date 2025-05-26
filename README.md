@@ -7,7 +7,7 @@
 ![Название](https://s.iimg.su/s/26/YRrroJlchpsuzxZUyphdIPvT0KIBN4TLdUbBJhOS.png)
 - Создастся папка-шаблон
 
-![Папка-шаблон](https://s.iimg.su/s/26/TYpXK0lSECOvySWSZoOegY0o6LvqwsuzGzaF0Ipk.png)
+![Папка-шаблон](https://s.iimg.su/s/26/EGacknz1xRiLmLwOcnVhEunK9KzEA0UxrBZtCRu7.png)
 
 # Настройка расширения
 - Список основных папок для создания - папки которые будут созданы в корне основной папки
