@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 
             const folderName = await vscode.window.showInputBox({
                 prompt: 'Введите имя новой папки (будет создана внутри выбранной)',
-                validateInput: text => text.trim() === '' ? 'Имя не может быть пустым' : null
+                validateInput: (text: string) => text.trim() === '' ? 'Имя не может быть пустым' : null
             });
             if (!folderName) {
                 vscode.window.showWarningMessage('Отменено создание папки');
@@ -61,8 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
                 }
             }
 
-            // Создаём config.cpp внутри scripts (если папка scripts есть)
-            const configFolderPath = path.join(newFolderPath, 'scripts');
+            // Создаём config.cpp в корне новой папки
             const configContent =
 `class CfgPatches
 {
@@ -124,18 +123,11 @@ class CfgMods
 };
 `;
 
-            // Проверяем, что папка scripts существует, чтобы создать config.cpp
-            try {
-                await fs.access(configFolderPath);
-                await fs.writeFile(path.join(configFolderPath, 'config.cpp'), configContent, { encoding: 'utf8' });
-            } catch {
-                // Если нет папки scripts — просто создаём config.cpp в корне новой папки
-                await fs.writeFile(path.join(newFolderPath, 'config.cpp'), configContent, { encoding: 'utf8' });
-            }
+            await fs.writeFile(path.join(newFolderPath, 'config.cpp'), configContent, { encoding: 'utf8' });
 
             vscode.window.showInformationMessage(`Папка '${folderName}' со структурой успешно создана.`);
 
-            const configPath = (await fs.access(configFolderPath).then(() => path.join(configFolderPath, 'config.cpp')).catch(() => path.join(newFolderPath, 'config.cpp')));
+            const configPath = path.join(newFolderPath, 'config.cpp');
             const document = await vscode.workspace.openTextDocument(configPath);
             await vscode.window.showTextDocument(document);
 
