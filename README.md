@@ -6,7 +6,8 @@
 - Введите название папки
 ![Название](https://s.iimg.su/s/26/YRrroJlchpsuzxZUyphdIPvT0KIBN4TLdUbBJhOS.png)
 - Создастся папка-шаблон
-![Название](https://s.iimg.su/s/26/408xxKqEgdLQFb5hBcPcWR9wp990H2YsICWZLk8F.png)
+
+![Папка-шаблон](https://s.iimg.su/s/26/TYpXK0lSECOvySWSZoOegY0o6LvqwsuzGzaF0Ipk.png)
 
 # Настройка расширения
 - Список основных папок для создания - папки которые будут созданы в корне основной папки
