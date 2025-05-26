@@ -1,0 +1,79 @@
+{
+  "name": "dayz-create-template-folder",
+  "displayName": "DayZ.Create Template Folder",
+  "description": "Расширение для создания папки шаблона с нужной структурой",
+  "version": "1.0.0",
+  "publisher": "sladya",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sladya/DayZ.CreateTemplateFolder.git"
+  },
+  "icon": "logo.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "DayZ.Create Template Folder Settings",
+      "properties": {
+        "DayZ.CreateTemplateFolder.author": {
+          "type": "string",
+          "default": "Sladya",
+          "description": "Автор, который будет подставляться в config.cpp"
+        },
+        "DayZ.CreateTemplateFolder.folders": {
+          "type": "array",
+          "default": ["scripts"],
+          "description": "Список основных папок для создания",
+          "items": {
+            "type": "string"
+          }
+        },
+        "DayZ.CreateTemplateFolder.subfolders": {
+          "type": "object",
+          "default": {
+            "scripts": ["4_World", "3_Game", "5_Mission"]
+          },
+          "description": "Объект с массивами подпапок для каждой основной папки",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.DayZ.CreateTemplateFolder",
+        "title": "Создать папку(шаблон для мода)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.DayZ.CreateTemplateFolder",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.9.0"
+  }
+}
