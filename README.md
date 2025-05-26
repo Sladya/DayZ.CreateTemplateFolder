@@ -6,8 +6,7 @@
 - Введите название папки
 ![Название](https://s.iimg.su/s/26/YRrroJlchpsuzxZUyphdIPvT0KIBN4TLdUbBJhOS.png)
 - Создастся папка-шаблон
-
-![Папка-шаблон](https://s.iimg.su/s/26/EGacknz1xRiLmLwOcnVhEunK9KzEA0UxrBZtCRu7.png)
+![Папка-шаблон](https://s.iimg.su/s/26/NmVfqPcJWIHHJb3s03eECl5w691iIyZenh4cIrxi.png)
 
 # Настройка расширения
 - Автор, который будет подставляться в config.cpp - содержимое данной строки будет подставлено в строку author = "";
